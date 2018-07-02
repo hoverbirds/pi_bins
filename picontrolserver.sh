@@ -50,9 +50,7 @@ export hostapd=1
 #export sik=1
 #export lepton=1
 #export seek=1
-#export interfaces=wlan0,zt0 # comma seperated list of interfaces, no spaces
-export interfaces=zt0 # comma seperated list of interfaces, no spaces
-#export interfaces=wlan0 # comma seperated list of interfaces, no spaces
+export interfaces=wlan0 # comma seperated list of interfaces, no spaces
 export beacon_interval=1000 # milli seocnds
 
 # change unique id to something usefull to identify the vehicle 
@@ -68,5 +66,5 @@ while :; do
          cd $AP_BIN_DIR 
          $AP_BIN_DIR/picontrolserver
          cd -
-#done >> /dev/null 2>&1
-done > /home/pi/ardupilot/info/picontrolserver.log 2>&1
+done 
+#done > /home/pi/ardupilot/info/picontrolserver.log 2>&1
