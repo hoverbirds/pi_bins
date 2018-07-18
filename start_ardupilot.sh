@@ -28,7 +28,7 @@ restart_counter=0
 while [ $restart_counter -lt 4 ]; do
     cd $AP_BIN_DIR
     #sitl
-    $AP_BIN_DIR/$VEHICLE_BIN -S -I0 --home -35.363261,149.165230,584,353 --model + --speedup 1 --defaults /home/pi/ardupilot/ardupilot/Tools/autotest/default_params/copter.parm
+    #$AP_BIN_DIR/$VEHICLE_BIN -S -I0 --home -35.363261,149.165230,584,353 --model + --speedup 1 --defaults /home/pi/ardupilot/ardupilot/Tools/autotest/default_params/copter.parm
     #raspilot
     #$AP_BIN_DIR/$VEHICLE_BIN -A tcp:127.0.0.1:5760 -B $GPS $FLAGS
     cd -
