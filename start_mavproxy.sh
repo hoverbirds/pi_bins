@@ -29,6 +29,7 @@ while [ $restart_counter -lt 40 ]; do
     #mavproxy.py --master=$SERIAL_PORT --baudrate 57600 --out $1:14550 
     #pixhawk
     mavproxy.py --master=$SERIAL_PORT --baudrate 57600 --out $1:14550 
+    #mavproxy.py --master=$SERIAL_PORT --baudrate 921600 --out $1:14550 
     cd -
     restart_counter=$((restart_counter+1))
 done
