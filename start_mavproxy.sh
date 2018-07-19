@@ -24,11 +24,11 @@ restart_counter=0
 while [ $restart_counter -lt 40 ]; do
     cd $AP_BIN_DIR
     #sitl
-    #mavproxy.py --master tcp:127.0.0.1:5760 --sitl 127.0.0.1:5501 --out 127.0.0.1:14550 --out $1:14550
+    mavproxy.py --master tcp:127.0.0.1:5760 --sitl 127.0.0.1:5501 --out 127.0.0.1:14550 --out $1:14550
     #raspilot
     #mavproxy.py --master=$SERIAL_PORT --baudrate 57600 --out $1:14550 
     #pixhawk
-    mavproxy.py --master=$SERIAL_PORT --baudrate 57600 --out $1:14550 
+    #mavproxy.py --master=$SERIAL_PORT --baudrate 57600 --out $1:14550 
     #mavproxy.py --master=$SERIAL_PORT --baudrate 921600 --out $1:14550 
     cd -
     restart_counter=$((restart_counter+1))
